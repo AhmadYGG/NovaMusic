@@ -1,0 +1,14 @@
+{
+    "prefix": "n!",
+    "guildId": "YOUR_GUILD_ID",
+    "clientId": "YOUR_CLIENT_ID",
+    "owner": "YOUR_OWNER_ID",
+    "token": "YOUR_BOT_TOKEN",
+    "colorDefault": "#ecc5c0",
+    "colorError": "#FF4949",
+    "spotifyApi": {
+        "enabled": true,
+        "clientSecret": "YOUR_SPOTIFY_CLIENT_SECRET",
+        "clientId": "YOUR_SPOTIFY_CLIENT_ID"
+    }
+}

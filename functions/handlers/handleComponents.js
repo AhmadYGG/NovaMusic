@@ -14,15 +14,20 @@ module.exports = (client) => {
                 case "buttons":
                     for (const file of componentFiles) {
                         const button = require(`../../components/${folder}/${file}`);
-                        buttons.set(button.data.name, button);
+                        if (button && button.data) {
+                            buttons.set(button.data.name, button);
+                        }
                     }
                     break;
             
                 case "selectMenus":
                     for (const file of componentFiles) {
                         const selectMenu = require(`../../components/${folder}/${file}`);
-                        selectMenus.set(menu.data.name, menu);
+                        if (selectMenu && selectMenu.data) {
+                            selectMenus.set(selectMenu.data.name, selectMenu);
+                        }
                     }
+                    break;
 
                 default:
                     break;
