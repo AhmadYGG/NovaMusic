@@ -1,0 +1,18 @@
+services:
+  musicbot:
+    image: novabot:latest
+    build: .
+    container_name: novamusic-bot
+    restart: unless-stopped
+    volumes:
+      # Mount config lokal jika ingin edit tanpa rebuild
+      - ./config.json:/usr/src/app/config.json:ro
+      - ./commands:/usr/src/app/commands:ro
+      - ./events:/usr/src/app/events:ro
+    # Tidak perlu port karena bot tidak expose service http
+    networks:
+      - bot-net
+
+networks:
+  bot-net:
+    driver: bridge
